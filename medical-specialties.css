@@ -1,0 +1,102 @@
+@import "globalStyle.css";
+@import "bootstrap-4.5.3-dist/css/bootstrap.min.css";
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /*every section is below another so the display is flex column*/
+}
+
+
+/* header */
+
+#header {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    /* so the header drob downs be on the other part of the page */
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-items: center;
+    justify-self: center;
+    justify-content: center;
+    /* so it will be in center and rtl direction */
+}
+
+#header>.defaultbutton {
+    position: relative;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 5px;
+    margin: auto;
+    margin-right: 50px;
+    background-color: rgb(237, 237, 237);
+    color: blue;
+    text-align: center;
+}
+
+#header>.defaultbutton:hover {
+    color: #FB815E;
+}
+
+#header>.defaultbutton>svg {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+
+/* default header buttons look like */
+
+#header>ul>li>a {
+    font-size: larger;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* every header elemnt picture */
+
+#header>ul>li svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-bottom: -6px;
+    margin-left: 5px;
+}
+
+
+/* every header elemnt dad*/
+
+#header>ul>li {
+    position: relative;
+    margin-left: 2vw;
+    display: inline;
+}
+
+
+/* Drop downs defulat show case */
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+
+
+/* hover header */
+
+#header>ul>li:hover a {
+    color: #FB815E;
+}
+
+#header>ul>li:hover .dropdown {
+    color: #FB815E;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* /////////////////// */
