@@ -67,10 +67,6 @@ input::placeholder {
     color: gray;
 }
 
-a {
-    text-decoration: none;
-}
-
 p {
     font-size: larger;
 }
