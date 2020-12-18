@@ -53,6 +53,7 @@ body {
     font-size: larger;
     color: black;
     font-weight: bold;
+    text-decoration: none;
 }
 
 
@@ -100,3 +101,79 @@ body {
 
 
 /* /////////////////// */
+
+
+/* specialist section START*/
+
+.sliderBar {
+    background-color: #FB815E;
+    width: 40vw !important;
+    margin-left: 5vw;
+}
+
+.specialistContentS {
+    display: flex;
+    flex-direction: row;
+}
+
+.specialistContent {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 0px;
+    width: 700px !important;
+    padding: 5px;
+    border-style: ridge;
+    border-color: gray;
+    border-radius: 15px;
+    border-width: 1px;
+    padding: 5px;
+}
+
+.specialistContentHeader>img {
+    height: 60px;
+    background-color: turquoise;
+    border-radius: 10px;
+    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.specialistContentHeader>h5 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.specialistContent p {
+    font-size: small;
+    text-align: justify;
+    color: gray;
+}
+
+.specialistContent .defaultbutton {
+    border-radius: 5px;
+    height: 40px;
+    border-style: solid;
+    background-color: white;
+    border-color: rgb(231, 103, 67);
+    color: rgb(231, 103, 67);
+    margin-left: -12px;
+    margin-right: 10px;
+}
+
+.specialistContent .defaultbutton:hover {
+    color: white;
+    background-color: rgb(231, 103, 67);
+}
+
+.specialistContentFooter h6 {
+    text-align: center;
+    color: gray;
+}
+
+.specialistContentFooter img {
+    width: 25px;
+    margin-right: -10px;
+}
+
+
+/* specialist section END*/
