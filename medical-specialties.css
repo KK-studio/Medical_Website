@@ -107,11 +107,15 @@ body {
 
 .sliderBar {
     background-color: #FB815E;
-    width: 40vw !important;
-    margin-left: 5vw;
+    width: 20vw;
 }
 
 .specialistContentS {
+    display: flex;
+    flex-direction: column;
+}
+
+.specialistContentS>div {
     display: flex;
     flex-direction: row;
 }
@@ -120,13 +124,18 @@ body {
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 0px;
-    width: 700px !important;
+    width: 240px;
+    height: 260px;
     padding: 5px;
     border-style: ridge;
     border-color: gray;
     border-radius: 15px;
     border-width: 1px;
-    padding: 5px;
+    padding: 10px;
+}
+
+.specialistContentHeader {
+    margin-bottom: 10px;
 }
 
 .specialistContentHeader>img {
@@ -147,25 +156,33 @@ body {
     font-size: small;
     text-align: justify;
     color: gray;
+    padding: 10px;
+    margin-bottom: 36px;
 }
 
-.specialistContent .defaultbutton {
+.specialistContentFooter {
+    display: flex;
+    margin: auto;
+}
+
+.specialistContentFooter>.defaultbutton {
     border-radius: 5px;
-    height: 40px;
+    height: 46px;
+    width: 110px;
     border-style: solid;
     background-color: white;
     border-color: rgb(231, 103, 67);
     color: rgb(231, 103, 67);
-    margin-left: -12px;
     margin-right: 10px;
 }
 
-.specialistContent .defaultbutton:hover {
+.specialistContentFooter>.defaultbutton:hover {
     color: white;
     background-color: rgb(231, 103, 67);
 }
 
 .specialistContentFooter h6 {
+    margin-right: -10px;
     text-align: center;
     color: gray;
 }
@@ -173,6 +190,13 @@ body {
 .specialistContentFooter img {
     width: 25px;
     margin-right: -10px;
+}
+
+.specialistContentFooter>div {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
 }
 
 
