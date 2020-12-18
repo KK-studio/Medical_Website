@@ -4,6 +4,8 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
+    direction: rtl;
+    text-align: right;
     /*every section is below another so the display is flex column*/
 }
 
@@ -103,12 +105,92 @@ body {
 /* /////////////////// */
 
 
-/* specialist section START*/
+/* Slider section */
+
+.sliderBarHeader {
+    padding: 5px;
+    border-bottom: 1px solid lightblue;
+    margin-bottom: 10px;
+}
+
+.sliderFooter {
+    text-align: center;
+    color: blue;
+    padding: 5px;
+    border-top: 1px solid lightblue;
+    margin-bottom: 10px;
+}
+
+.sliderBarHeader>h3 {
+    font-size: large;
+}
+
+.sliderBarSection {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightblue;
+    border-radius: 15px;
+    margin: 5px;
+    height: 75vh;
+    height: fit-content;
+}
 
 .sliderBar {
-    background-color: #FB815E;
+    padding: 10px;
+    margin: 5px;
+    overflow-y: scroll;
     width: 20vw;
+    height: 60vh;
 }
+
+.sliderBarSearch {
+    position: relative;
+}
+
+.sliderBarSearch>input {
+    border-width: 2px;
+    border-radius: 5px;
+    padding-right: 32px;
+    height: 40px;
+    width: 95%;
+    margin: 5px;
+}
+
+.sliderBarSearch>svg {
+    position: absolute;
+    right: 10px;
+    top: 25%;
+}
+
+.sliderBarSearch>svg:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.sliderAlphabet {
+    width: 2.5vw;
+    height: 5vh;
+    text-align: center;
+    background-color: rgb(229, 242, 254);
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightblue;
+}
+
+.sliderBar>h5:hover {
+    margin-left: auto;
+    width: max-content;
+    cursor: pointer;
+    color: blue;
+    border-bottom: 3px dotted black;
+}
+
+
+/* slider finished */
+
+
+/* specialist section START*/
 
 .specialistContentS {
     display: flex;
@@ -201,3 +283,124 @@ body {
 
 
 /* specialist section END*/
+
+
+/* cover page started*/
+
+.coverPage {
+    background-color: blue;
+    margin-top: 80px;
+    padding-top: 300px;
+    padding-bottom: 100px;
+    color: white;
+    text-align: center;
+}
+
+.coverPage>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.coverLink {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coverLink a {
+    font-size: x-large;
+    color: white;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+#coverPageMainPanel {
+    margin-top: -150px;
+}
+
+#coverPageMainPanel>div {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+#coverPageMainPanel>div>.socialMedia {
+    margin-right: 50px;
+    margin-left: 50px;
+    color: white;
+}
+
+.solidLine {
+    width: 25vw;
+    height: 25vh;
+    margin: auto;
+    display: flex;
+}
+
+.solidLine>:first-child {
+    width: 25vw;
+    height: 25vh;
+    padding: 1px;
+}
+
+.solidLine>:last-child {
+    width: 25vw;
+    height: 25vh;
+    padding: 1px;
+    border-right: 1px solid white;
+}
+
+.signUpCoverPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signUpCoverPage>div>input {
+    width: 9.5vw;
+    height: 4vh;
+    border-radius: 5px;
+    margin-left: 0.1px;
+    margin-bottom: 10px;
+    border-width: 1.5px;
+}
+
+.signUpCoverPage>input {
+    width: 20vw;
+    height: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-width: 1.5px;
+}
+
+.signUpCoverPage>.defaultbutton {
+    position: relative;
+    width: 21vw;
+    height: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.signUpCoverPage>.defaultbutton>svg {
+    position: absolute;
+    right: 5%;
+}
+
+.signUpCoverPage>:last-child>.socialMedia {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.signUpCoverPage>:last-child>.socialMedia>img {
+    background-color: white;
+    width: 120px;
+    height: 160px;
+    border-radius: 15px;
+}
+
+
+/* cover page ended */
