@@ -23,6 +23,11 @@ body {
     background-color: #FAFAFA;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .header-part-background {
     position: fixed;
     z-index: 1000;
@@ -511,6 +516,277 @@ body {
     width: 80%;
     height: 90%;
 }
+
+
+
+
+#middle-Part-userComments{
+   position: relative;
+   margin-top: 40px;
+   border-radius: 10px;
+   height: 100vh;
+   width: 100%; 
+   /* border-color: #ced4da; */
+   border: 1px solid #dbdbdb;
+}
+
+#middle-Part-userComments-header{
+    position: relative;
+    height: 55px;
+    width: 100%;
+    background-color: #ededed;
+    border-bottom: 1px solid #ededed;
+}
+
+#middle-Part-userComments-header>svg{
+    position: absolute;
+    right: 1%;
+    top: 10%;
+}
+
+#middle-Part-userComments-header-content{
+    position: absolute;
+    right: 5%;
+}
+
+#middle-Part-userComments-votes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    gap: 30%;
+    position: relative;
+}
+
+#middle-Part-userComments-votes-left>svg{
+    display: inline;
+    position: relative;
+}
+
+#middle-Part-userComments-votes-left>p{
+    display: inline;
+    position: relative;
+    top: -1vh;
+    font-size: 12px;
+}
+
+#middle-Part-userComments-votes-left-avgTime{
+    font-size: 12px;
+    color: #3b4157;
+    margin-right: 15%;
+}
+
+#middle-Part-userComments-votes-right>svg{
+    display: inline;
+    position: relative;
+}
+
+#middle-Part-userComments-votes-right>p{
+    display: inline;
+    position: relative;
+    top: -1vh;
+    font-size: 12px;
+}
+
+
+#middle-Part-userComments-votes-right-points-1{
+    position: relative;
+}
+
+#middle-Part-userComments-votes-right-points-2{
+    position: relative;
+}
+
+#middle-Part-userComments-votes-right-points-3{
+    position: relative;
+}
+
+#middle-Part-userComments-votes-right-points-4{
+    position: relative;
+}
+
+#middle-Part-userComments-votes-right-points-5{
+    margin-top: 5%!important;
+    position: relative;
+}
+
+.points-rows-progressBar-fill{
+    position:absolute;
+    right: 0;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+}
+
+.points-rows{
+    position: relative;
+    margin-top: 14%;
+}
+
+.points-rows-right{
+    font-size: 10px;
+    position: absolute;
+    right: 1%;
+}
+
+.points-rows-left{
+    font-size: 10px;
+    position: absolute;
+    left: 1%;
+}
+
+.points-rows-progressBar{
+    position: relative;
+    top: 7px;
+    margin-left: 10%;
+    margin-right: 20%;
+    width: 70%;
+    height: 0.5vh;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+#middle-Part-userComments-sorting{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #dbdbdb;
+    height: 5vh;
+    width: 90%;
+    border-radius: 10px;
+
+}
+
+#middle-Part-userComments-sorting-grid{
+    position: relative;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#middle-Part-userComments-sorting-grid-rightElement>svg{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+#middle-Part-userComments-sorting-grid-rightElement>h1{
+    margin-right: 20%;;
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.middle-Part-userComments-sorting-choice{
+    margin-top: 7px;
+    color: #6e7794;
+    font-size: 12px;
+    text-align: center;
+}
+
+.middle-Part-userComments-sorting-choice-active{
+    margin-top: 7px;
+    color: white;
+    background-color: blue;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#middle-Part-userComments-peopleComments{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 90%;
+}
+
+#middle-Part-userComments-peopleComments-box{
+    height: 25vh;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+}
+
+#middle-Part-userComments-peopleComments-box-header{
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 25%;
+    background-color: #ededed;
+}
+
+#middle-Part-userComments-peopleComments-box-header>svg{
+    position: absolute;
+}
+
+.middle-Part-userComments-peopleComments-box-header-owner{
+    position: absolute;
+    right: 7%;
+    font-size: 9px;
+    top: 30%;
+    color: #6e7794;
+}
+
+.middle-Part-userComments-peopleComments-box-header-points{
+    position: absolute;
+    color: green;
+    left: 2%; 
+    top: 55%;
+    font-size: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* شروع بخش هایی کپی پیستی */
