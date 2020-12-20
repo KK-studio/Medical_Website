@@ -111,6 +111,7 @@ body {
     background-color: blue;
     color: white;
     border-radius: 10px;
+    scale: 120%;
 }
 
 #topPageHeader>* {
@@ -127,13 +128,15 @@ body {
 /* Center page section started */
 
 #center-page {
+    scale: 120%;
     margin: auto;
     margin-bottom: 50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
 }
 
-#sorting{
+#sorting {
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -141,38 +144,38 @@ body {
     height: 5vh;
     width: 100%;
     border-radius: 10px;
-
 }
 
-#sorting-grid{
+#sorting-grid {
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 2.5fr  ;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 2.5fr;
     gap: 15px;
 }
 
-#sorting-grid-rightElement>svg{
+#sorting-grid-rightElement>svg {
     position: absolute;
     top: 2px;
     right: 5px;
 }
 
-#sorting-grid-rightElement>h1{
-    margin-right: 20%;;
+#sorting-grid-rightElement>h1 {
+    margin-right: 20%;
+    ;
     display: inline;
     font-size: 12px;
     font-weight: bold;
 }
 
-.sorting-choice{
+.sorting-choice {
     margin-top: 5%;
     color: #6e7794;
     font-size: 12px;
     text-align: center;
 }
 
-.sorting-choice-active{
+.sorting-choice-active {
     margin-top: 5%;
     height: 110%;
     color: white;
@@ -182,25 +185,35 @@ body {
     border-radius: 5px;
 }
 
-.dr{
+
+/* neurologist area started*/
+
+#neurologist-section-parent {
+    display: flex;
+    flex-direction: column;
+    /* background-color: crimson; */
+    margin-left: -30px;
+    margin-right: 10px;
+}
+
+.dr {
+    background-color: white;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 100%;
     height: 25vh;
     border-radius: 10px;
     border: 1px solid #ededed;
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 6fr 5fr ;
+    grid-template-columns: 2fr 6fr 5fr;
     cursor: pointer;
 }
 
-.dr:hover{
+.dr:hover {
     border: 1px solid #fb815e!important;
 }
 
-
-.dr-rightSide>img{
+.dr-rightSide>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -209,57 +222,56 @@ body {
     height: auto;
 }
 
-.dr-centeral{
-
+.dr-centeral {
+    background-color: white;
 }
 
-.dr-centeral>h1{
+.dr-centeral>h1 {
     margin-top: 5%;
     color: #3b4157;
     font-size: 15px;
     font-weight: 700;
 }
 
-.dr-centeral>h2{
+.dr-centeral>h2 {
     color: #3b4157;
     font-size: 13px;
     font-weight: 400;
 }
 
-.dr-centeral-stars{
+.dr-centeral-stars {}
 
-}
-
-.dr-centeral-stars>p{
+.dr-centeral-stars>p {
     display: inline;
     color: #6e7794;
     font-size: 8px;
 }
 
-.dr-centeral>p{
+.dr-centeral>p {
     margin-top: 6%;
     font-size: 12px;
     color: #808891;
 }
 
-
-.dr-leftSide{
+.dr-leftSide {
     position: relative;
+    background-color: white;
 }
 
-.dr-leftSide-status{
+.dr-leftSide-status {
     display: block;
     position: relative;
     background-color: #e5f2fe;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2.5%;
+    margin-bottom: 2%;
     width: 90%;
     height: 50%;
     border-radius: 10px;
 }
 
-.dr-leftSide-status>p{
+.dr-leftSide-status>p {
     display: inline;
     font-size: 10px;
     position: relative;
@@ -269,31 +281,63 @@ body {
     margin-right: 3%;
 }
 
-.dr-leftSide-status>svg{
+.dr-leftSide-status>svg {
     width: 15px;
     height: auto;
-    display:inline-block;
+    display: inline-block;
     margin-right: 3%;
     color: #6e7794;
 }
 
-.dr-leftSide-status>svg:first-child{
-    margin-top:3%;
+.dr-leftSide-status>svg:first-child {
+    margin-top: 3%;
 }
-.dr-leftSide-status>p:nth-child(2){
+
+.dr-leftSide-status>p:nth-child(2) {
     top: 2%;
 }
 
-.dr-leftSide-status>svg:nth-child(4){
+.dr-leftSide-status>svg:nth-child(4) {
     margin-top: 1%;
 }
 
-.dr-leftSide-status>svg:nth-child(7){
+.dr-leftSide-status>svg:nth-child(7) {
     margin-top: 0%;
     margin-right: 2.9%;
 }
 
-.dr-leftSide-firstVisitTime{
+.dr-leftSide .defaultbutton {
+    margin: 5px;
+    width: 10vw;
+    height: 5vh;
+    margin-right: 15px;
+    position: relative;
+}
+
+.dr-leftSide .defaultbutton>svg {
+    position: absolute;
+    right: 15px;
+}
+
+.dr-leftSide .like {
+    z-index: 1;
+    margin: 5px;
+    margin-right: 8px;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: blue;
+}
+
+.dr-leftSide .like:hover {
+    fill: orange;
+    color: orange;
+}
+
+.dr-leftSide-firstVisitTime {
     width: 100%;
     font-size: 10px;
     /* right: 0%; */
@@ -602,35 +646,13 @@ input:checked+.slider:before {
 /* ////// */
 
 
-/* neurologist area started*/
-
-#neurologist-section-parent {
-    display: flex;
-    flex-direction: column;
-    /* background-color: crimson; */
-    margin-left: auto;
-    margin-right: 10px;
-}
-
-
-
-
 /* بخش آبی کاشانی */
-
-
-
-
-
-
 
 
 /* اتمام بخش آبی */
 
 
 /* بخش سوالات متداول دانیال */
-
-
-
 
 
 /* اتمام بخش سوالات متداول */
@@ -707,11 +729,6 @@ input:checked+.slider:before {
     height: 17vh;
     background-color: white;
 }
-
-
-
-
-
 
 #endBluePart-middlePart-center+p {
     /* padding-top: 0.05vh; */
