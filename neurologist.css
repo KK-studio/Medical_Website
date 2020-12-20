@@ -159,25 +159,24 @@ body {
     left: 2vw;
 }
 
-.dropdown-content {
-    display: block;
-    height: 60px;
-}
 
-.mydropdown h5:hover {
-    cursor: pointer;
-}
-
-.mydropdown:active .afterClickActive {
-    display: block;
-    height: 60px;
-    background-color: black;
-}
+/* after drop down activated presentation setting */
 
 .afterClickActive {
     display: none;
     z-index: 1;
     top: 0px;
+}
+
+
+/* after selection dropdown new elemnt will be activated */
+
+.afterClickHidden:hover {
+    cursor: pointer;
+}
+
+.mydropdown:active .afterClickActive {
+    display: block;
 }
 
 .afterClickActive:hover {
@@ -189,6 +188,7 @@ body {
 }
 
 .mydropdownClone {
+    z-index: 1;
     background-color: rgb(250, 250, 250);
     border: 1px solid lightblue;
     border-radius: 5px;
@@ -204,6 +204,7 @@ body {
 .mydropdownClone svg {
     position: absolute;
     left: 2vw;
+    rotate: 180deg;
 }
 
 
