@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     direction: rtl;
     text-align: right;
+    background-color: rgb(250, 250, 250);
     /*every section is below another so the display is flex column*/
 }
 
@@ -105,10 +106,15 @@ body {
 /* Header page Started */
 
 #topPageHeader {
-    height: 100px;
     margin-top: 40px;
     margin-bottom: 50px;
     background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+
+#topPageHeader>* {
+    padding: 10px;
 }
 
 
@@ -131,19 +137,61 @@ body {
 /* Right searching area started*/
 
 #right-center-section {
-    width: 255px;
-    height: auto;
+    margin-left: 10px;
+}
+
+#right-center-section img {
+    width: 300px;
+    height: inherit;
+    margin-bottom: 10px;
+}
+
+#sliderBarSearchDad {
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: ridge;
+    border-color: lightblue;
+}
+
+#sliderBarSearchDad>h5 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightblue;
+}
+
+.sliderBarSearch {
+    position: relative;
+}
+
+.sliderBarSearch>input {
+    border-width: 2px;
+    border-radius: 5px;
+    padding-right: 32px;
+    height: 40px;
+    width: 95%;
     margin: 5px;
-    border: 1px solid black;
-    background-color: rgb(250, 250, 250);
+}
+
+.sliderBarSearch>svg {
+    position: absolute;
+    right: 10px;
+    top: 25%;
+}
+
+.sliderBarSearch>svg:hover {
+    cursor: pointer;
+    color: blue;
 }
 
 
 /* right side drop downs Started*/
 
 .mydropdown {
+    background-color: white;
     position: relative;
-    margin: 5px;
+    margin-bottom: 5px;
     border: 1px solid lightblue;
     border-radius: 5px;
     padding: 5px;
@@ -154,9 +202,10 @@ body {
     color: rgb(41, 37, 37);
 }
 
-.mydropdown svg {
+.afterClickHidden svg {
     position: absolute;
-    left: 2vw;
+    left: 1vw;
+    rotate: 180deg;
 }
 
 
@@ -188,8 +237,9 @@ body {
 }
 
 .mydropdownClone {
+    overflow-y: auto;
+    max-height: 30vh;
     z-index: 1;
-    background-color: rgb(250, 250, 250);
     border: 1px solid lightblue;
     border-radius: 5px;
     padding: 5px;
@@ -199,21 +249,14 @@ body {
 .mydropdownClone h5 {
     padding-right: 10px;
     color: rgb(41, 37, 37);
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightblue;
 }
 
 .mydropdownClone svg {
     position: absolute;
-    left: 2vw;
-    rotate: 180deg;
+    left: 1vw;
 }
-
-
-/* .dropdown-content {
-    display: none;
-    position: absolute;
-}
-
- */
 
 
 /* ///// */
@@ -221,13 +264,17 @@ body {
 
 /* check box representation */
 
+.dropdown-content {
+    padding: 10px;
+}
+
 .check-box-dad {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 20px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 
@@ -299,62 +346,90 @@ body {
 }
 
 
-/* ////// */
+/* right toggle button */
 
-
-/* right side drop downs Ended*/
-
-
-/* Right side search bar started */
-
-#right-center-section>img {
-    width: inherit;
-    padding: 5px;
-}
-
-#sliderBarSearchDad {
-    padding: 5px;
-    margin: 5px;
+.toggle-manager {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
     border-radius: 10px;
-    border-width: 1px;
-    border-style: ridge;
-    border-color: lightblue;
+    border: 1px solid lightblue;
+    padding: 5px;
 }
 
-#sliderBarSearchDad>h5 {
-    padding-bottom: 10px;
-    border-bottom: 1px solid lightblue;
-}
 
-.sliderBarSearch {
+/* toggle button dad */
+
+.switch {
     position: relative;
+    width: 60px;
+    height: 34px;
 }
 
-.sliderBarSearch>input {
-    border-width: 2px;
-    border-radius: 5px;
-    padding-right: 32px;
-    height: 40px;
-    width: 95%;
-    margin: 5px;
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.sliderBarSearch>svg {
+
+/* The slider */
+
+.slider {
     position: absolute;
-    right: 10px;
-    top: 25%;
-}
-
-.sliderBarSearch>svg:hover {
     cursor: pointer;
-    color: blue;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    /* for better experience */
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 
 
-/* Right side search bar ended */
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
 
 
-/* Right searching area started*/
+/* ////// */
 
 
 /* neurologist area started*/
