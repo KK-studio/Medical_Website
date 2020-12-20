@@ -143,6 +143,9 @@ body {
     height: 60vh;
 }
 
+
+/* Right side search bar started */
+
 .sliderBarSearch {
     position: relative;
 }
@@ -166,6 +169,9 @@ body {
     cursor: pointer;
     color: blue;
 }
+
+
+/* Right side search bar ended */
 
 .sliderAlphabet {
     width: 2.5vw;

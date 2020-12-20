@@ -122,7 +122,6 @@ body {
 
 #center-page {
     margin: auto;
-    background-color: blue;
     margin-bottom: 50px;
     display: flex;
     flex-direction: row;
@@ -133,11 +132,225 @@ body {
 
 #right-center-section {
     width: 255px;
-    height: 300px;
-    background-color: #1780DF;
+    height: auto;
     margin: 5px;
     border: 1px solid black;
+    background-color: rgb(250, 250, 250);
 }
+
+
+/* right side drop downs Started*/
+
+.mydropdown {
+    position: relative;
+    margin: 5px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.mydropdown h5 {
+    padding-right: 10px;
+    color: rgb(41, 37, 37);
+}
+
+.mydropdown svg {
+    position: absolute;
+    left: 2vw;
+}
+
+.dropdown-content {
+    display: block;
+    height: 60px;
+}
+
+.mydropdown h5:hover {
+    cursor: pointer;
+}
+
+.mydropdown:active .afterClickActive {
+    display: block;
+    height: 60px;
+    background-color: black;
+}
+
+.afterClickActive {
+    display: none;
+    z-index: 1;
+    top: 0px;
+}
+
+.afterClickActive:hover {
+    display: block;
+}
+
+.afterClickActive:hover~.afterClickHidden {
+    display: none;
+}
+
+.mydropdownClone {
+    background-color: rgb(250, 250, 250);
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: -5px;
+}
+
+.mydropdownClone h5 {
+    padding-right: 10px;
+    color: rgb(41, 37, 37);
+}
+
+.mydropdownClone svg {
+    position: absolute;
+    left: 2vw;
+}
+
+
+/* .dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+ */
+
+
+/* ///// */
+
+
+/* check box representation */
+
+.check-box-dad {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+
+/* remove    default checkbox */
+
+.check-box-dad input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 25px;
+}
+
+
+/* On mouse-over actions */
+
+.check-box-dad:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* on check actions */
+
+.check-box-dad input:checked~.checkmark {
+    background-color: orange;
+}
+
+
+/* hidden when not checked */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.check-box-dad input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* check mark representation */
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    /* for right rotation */
+}
+
+
+/* ////// */
+
+
+/* right side drop downs Ended*/
+
+
+/* Right side search bar started */
+
+#right-center-section>img {
+    width: inherit;
+    padding: 5px;
+}
+
+#sliderBarSearchDad {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: ridge;
+    border-color: lightblue;
+}
+
+#sliderBarSearchDad>h5 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightblue;
+}
+
+.sliderBarSearch {
+    position: relative;
+}
+
+.sliderBarSearch>input {
+    border-width: 2px;
+    border-radius: 5px;
+    padding-right: 32px;
+    height: 40px;
+    width: 95%;
+    margin: 5px;
+}
+
+.sliderBarSearch>svg {
+    position: absolute;
+    right: 10px;
+    top: 25%;
+}
+
+.sliderBarSearch>svg:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+
+/* Right side search bar ended */
 
 
 /* Right searching area started*/
