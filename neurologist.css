@@ -127,6 +127,176 @@ body {
     flex-direction: row;
 }
 
+#sorting{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #dbdbdb;
+    height: 5vh;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+#sorting-grid{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 2.5fr  ;
+    gap: 15px;
+}
+
+#sorting-grid-rightElement>svg{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+#sorting-grid-rightElement>h1{
+    margin-right: 20%;;
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sorting-choice{
+    margin-top: 5%;
+    color: #6e7794;
+    font-size: 12px;
+    text-align: center;
+}
+
+.sorting-choice-active{
+    margin-top: 5%;
+    height: 110%;
+    color: white;
+    background-color: blue;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 25vh;
+    border-radius: 10px;
+    border: 1px solid #ededed;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 6fr 5fr ;
+    cursor: pointer;
+}
+
+.dr:hover{
+    border: 1px solid #fb815e!important;
+}
+
+
+.dr-rightSide>img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 70%;
+    height: auto;
+}
+
+.dr-centeral{
+
+}
+
+.dr-centeral>h1{
+    margin-top: 5%;
+    color: #3b4157;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.dr-centeral>h2{
+    color: #3b4157;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.dr-centeral-stars{
+
+}
+
+.dr-centeral-stars>p{
+    display: inline;
+    color: #6e7794;
+    font-size: 8px;
+}
+
+.dr-centeral>p{
+    margin-top: 6%;
+    font-size: 12px;
+    color: #808891;
+}
+
+
+.dr-leftSide{
+    position: relative;
+}
+
+.dr-leftSide-status{
+    display: block;
+    position: relative;
+    background-color: #e5f2fe;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.dr-leftSide-status>p{
+    display: inline;
+    font-size: 10px;
+    position: relative;
+    color: #6e7794;
+    font-weight: 700!important;
+    color: #6e7794;
+    margin-right: 3%;
+}
+
+.dr-leftSide-status>svg{
+    width: 15px;
+    height: auto;
+    display:inline-block;
+    margin-right: 3%;
+    color: #6e7794;
+}
+
+.dr-leftSide-status>svg:first-child{
+    margin-top:3%;
+}
+.dr-leftSide-status>p:nth-child(2){
+    top: 2%;
+}
+
+.dr-leftSide-status>svg:nth-child(4){
+    margin-top: 1%;
+}
+
+.dr-leftSide-status>svg:nth-child(7){
+    margin-top: 0%;
+    margin-right: 2.9%;
+}
+
+.dr-leftSide-firstVisitTime{
+    width: 100%;
+    font-size: 10px;
+    /* right: 0%; */
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+    color: green;
+}
+
 
 /* Right searching area started*/
 
@@ -361,7 +531,7 @@ body {
 #neurologist-section-parent {
     display: flex;
     flex-direction: column;
-    background-color: crimson;
+    /* background-color: crimson; */
     margin-left: auto;
     margin-right: 10px;
 }
