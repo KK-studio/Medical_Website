@@ -118,6 +118,24 @@ body {
     padding: 10px;
 }
 
+#way {
+    /* background-color: gray; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 5vh;
+    margin-top: 2%;
+    /* padding-top: 2vh; */
+}
+
+.blue-inline-text {
+    color: #1780df;
+    margin-right: 10px;
+    display: inline;
+    cursor: pointer;
+    font-size: 20px;
+}
 
 /* Header page Ended */
 
@@ -647,6 +665,62 @@ input:checked+.slider:before {
 
 
 /* بخش آبی کاشانی */
+
+#fieldInformation{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 30vh;
+    background-color: #e5f2fe;
+    border-radius: 10px;
+}
+
+#fieldInformation>h1{
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+#fieldInformation>p{
+    display: inline-block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    /* display: inline; */
+    margin-right: 20px;
+    font-size: 12px;
+    color: #6e7794;
+}
+
+#fieldInformation>p>span{
+    color: blue;
+}
+
+#fieldInformation-button{
+    position: absolute;
+    height: 15%;
+    width: 10%;
+    left: 5%;
+    bottom: 10%;
+    background-color: #fb815e;
+    border-color: #fb815e;
+    color: white;
+    padding-top: 0.5%;
+    padding-right: 0.9%;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+#fieldInformation-button:hover{
+    background-color: #fa6439;
+    border-color: #fa5a2c;
+}
+
+
+
+
 
 
 /* اتمام بخش آبی */
