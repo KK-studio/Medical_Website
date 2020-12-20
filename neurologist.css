@@ -613,10 +613,27 @@ input:checked+.slider:before {
 }
 
 
-/* neurologist area started*/
 
 
-/* Center page section ended */
+/* بخش آبی کاشانی */
+
+
+
+
+
+
+
+
+/* اتمام بخش آبی */
+
+
+/* بخش سوالات متداول دانیال */
+
+
+
+
+
+/* اتمام بخش سوالات متداول */
 
 
 /* بخش انتهایی صفحه */
@@ -690,6 +707,11 @@ input:checked+.slider:before {
     height: 17vh;
     background-color: white;
 }
+
+
+
+
+
 
 #endBluePart-middlePart-center+p {
     /* padding-top: 0.05vh; */
