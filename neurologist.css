@@ -654,6 +654,32 @@ input:checked+.slider:before {
 
 /* بخش سوالات متداول دانیال */
 
+#repetitiveQuestionsSection {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid lightblue;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+#repetitiveQuestionsSection h4 {
+    color: rgb(31, 24, 24);
+    margin-bottom: 50px;
+}
+
+.repetitiveQuestion {
+    margin-bottom: 15px;
+}
+
+.repetitiveQuestion>svg {
+    background-color: rgb(101, 101, 233);
+    border-radius: 10px 0px 10px 10px;
+}
+
+.repetitiveQuestion:hover {
+    cursor: pointer;
+}
+
 
 /* اتمام بخش سوالات متداول */
 
