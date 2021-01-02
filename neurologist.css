@@ -194,6 +194,7 @@ body {
     color: #6e7794;
     font-size: 12px;
     text-align: center;
+    cursor: pointer;
 }
 
 .sorting-choice-active {
@@ -204,6 +205,7 @@ body {
     font-size: 12px;
     text-align: center;
     border-radius: 5px;
+    cursor:pointer;
 }
 
 
