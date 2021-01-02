@@ -1,0 +1,610 @@
+@import "globalStyle.css";
+
+/* main page design peroperties */
+
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /*every section is below another so the display is flex column*/
+}
+
+
+/* header */
+
+#header {
+    display: flex;
+    z-index: 1;
+    /* so the header drob downs be on the other part of the page */
+    margin-top: 2%;
+    direction: rtl;
+    margin-left: auto;
+    margin-right: auto;
+    /* so it will be in center and rtl direction */
+}
+
+#header>.defaultbutton {
+    position: relative;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 5px;
+    margin: auto;
+    margin-right: 50px;
+    background-color: rgb(237, 237, 237);
+    color: blue;
+    text-align: center;
+}
+
+#header>.defaultbutton:hover {
+    color: #FB815E;
+}
+
+#header>.defaultbutton>svg {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+
+/* default header buttons look like */
+
+a {
+    font-size: larger;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* every header elemnt picture */
+
+li svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-bottom: -6px;
+    margin-left: 5px;
+}
+
+
+/* every header elemnt dad*/
+
+li {
+    position: relative;
+    margin-left: 2vw;
+    display: inline;
+}
+
+
+/* Drop downs defulat show case */
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+
+
+/* hover header */
+
+li:hover a {
+    color: #FB815E;
+}
+
+li:hover .dropdown {
+    color: #FB815E;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* /////////////////// */
+
+
+/* Search Bar Section Start*/
+
+#searchBarSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    /* so it will be in center and rtl direction */
+    background-image: url(./Resources/searchBackground.png);
+    background-color: rgb(152, 80, 245);
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    border-radius: 15px;
+}
+
+#searchBarSection h1 {
+    font-size: 46px;
+    color: white;
+}
+
+#searchBar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+#searchBar>input {
+    width: 36vw;
+    height: 8vh;
+    border-color: white;
+}
+
+#searchButton {
+    border-radius: 15px 0px 0px 15px;
+    border-style: solid;
+    background-color: #FB815E;
+    border-color: #FB815E;
+    color: white;
+    position: absolute;
+    height: 100%;
+    left: -20px;
+}
+
+
+/* tehran button near the input button design */
+
+#cityButton {
+    position: absolute;
+    height: 70%;
+    left: 13.8%;
+    /* so the 2 left side button wont collaps */
+    border-style: solid;
+    background-color: white;
+    border-color: white;
+    /* so the border layout wont be visible */
+    border-right: 2px solid gray;
+    margin-top: 10px;
+    color: gray;
+    padding-left: 80px;
+}
+
+
+/* on button hover actions */
+
+#searchButton:hover {
+    background-color: #f56841;
+    border-color: #f56841;
+    color: rebeccapurple;
+}
+
+
+/* Search Bar section End */
+
+
+/* technition part Started */
+
+#technitionSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    background-color: white;
+    border-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    border-radius: 15px;
+}
+
+#technitionSection h2 {
+    color: gray;
+}
+
+
+/* main div child elements have to be in row */
+
+#technitionSection>div {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#technitionSection>#technitionSectionHeader>button {
+    color: #1780DF;
+    border-style: solid;
+    background-color: white;
+    border-color: white;
+    position: absolute;
+    left: 10px;
+    top: 12%;
+}
+
+#technitionSection>:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* every technition bar image is above its text so layout is flex column */
+
+.technitionBar {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.technitionBar>div {
+    margin: 30px;
+    padding: 15px;
+    border-style: solid;
+    border-color: gray;
+    width: 60px;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.technitionBar:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 5px gray;
+}
+
+
+/* technition part Ended */
+
+
+/* Cooment section started */
+
+#comentsSection {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    padding-bottom: 100px;
+    background-color: aliceblue;
+}
+
+#comentsSection> :first-child {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 15%;
+}
+
+#commentPanel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 14%;
+    border-radius: 15px;
+    padding: 10px;
+    width: 36vw;
+    height: 45vh;
+    background-color: #E5F2FE;
+    border-style: solid;
+    border-color: blue;
+    direction: rtl;
+}
+
+#commentPanel>img {
+    position: absolute;
+    top: -5vh;
+    width: 4vw;
+}
+
+.comment {
+    border-top: 2px dotted black;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment>img {
+    width: 50px;
+    height: 50px;
+    margin-top: 18px;
+    margin-left: 20px;
+}
+
+.comment>div>:first-child {
+    margin-top: 14px;
+    margin-bottom: -20px;
+}
+
+
+/* button position absulote with the releative dad position */
+
+.comment>button {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    width: 32%;
+    height: 8%;
+    border-radius: 15px;
+}
+
+#commentPanel>div>button:hover {
+    background-color: #f56841;
+}
+
+
+/* making a rotated cube with padding background and rotation of it */
+
+#virtualCube {
+    position: absolute;
+    padding: 20px;
+    background-color: inherit;
+    border-style: inherit;
+    border-color: inherit;
+    bottom: -23.2px;
+    left: 80px;
+    rotate: 45deg;
+    border-left: none;
+    border-top: none;
+}
+
+#commentPanel>p {
+    font-size: larger;
+    position: absolute;
+    bottom: -90px;
+    left: 90px;
+}
+
+
+/* Cooment section ended */
+
+
+/* fastLinkSection Started */
+
+#fastLinkSection {
+    margin-top: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    background-image: url(./Resources/pngtree-fantasy-blue-gradient-background-gradientgradient-backgroundgradientposter-backgroundppt-image_56537.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#fastLinks {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+.fastLink {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.fastLink>img {
+    width: 20vw;
+}
+
+.fastLink>.defaultbutton {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+}
+
+.fastLink>.defaultbutton>svg {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    bottom: auto;
+}
+
+
+/* fastLinkSection ended */
+
+
+/* download panel Started */
+
+#downloadSection {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 15vh;
+}
+
+#downloadLogos {
+    display: flex;
+    flex-direction: column;
+}
+
+#downloadLogos>a>img {
+    width: 36vw;
+}
+
+#downloadLogos>a>div {
+    justify-content: center;
+    display: flex;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#downloadLogos>a>div>img {
+    margin-left: 20px;
+    width: 2vw;
+    height: 5vh;
+}
+
+#downloadPanel {
+    margin: auto;
+    margin-right: 150px;
+    direction: rtl;
+    color: rgb(26, 20, 20);
+}
+
+#sendNumber {
+    height: 40px;
+    border-width: 1px;
+    border-color: black;
+}
+
+#sendLink {
+    position: relative;
+    width: 10vw;
+    height: 5vh;
+    margin-right: 20px;
+}
+
+#sendLink>svg {
+    position: absolute;
+    right: 8%;
+}
+
+
+/* #sendLink>div {
+    position: absolute;
+    width: 2vw;
+    height: 100%;
+    background-color: rgba(252, 156, 129, 0.5);
+    border-radius: inherit;
+    transition: 1s;
+    right: 0px;
+    top: 0px;
+} */
+
+
+/* download panel Ended */
+
+
+/* cover page started*/
+
+.coverPage {
+    background-color: blue;
+    margin-top: 80px;
+    padding-top: 300px;
+    padding-bottom: 100px;
+    color: white;
+    text-align: center;
+}
+
+.coverPage>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.coverLink {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coverLink a {
+    font-size: x-large;
+    color: white;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+#coverPageMainPanel {
+    margin-top: -150px;
+}
+
+#coverPageMainPanel>div {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+#coverPageMainPanel>div>.socialMedia {
+    margin-right: 50px;
+    margin-left: 50px;
+    color: white;
+}
+
+.solidLine {
+    width: 25vw;
+    height: 25vh;
+    margin: auto;
+    display: flex;
+}
+
+.solidLine>:first-child {
+    width: 25vw;
+    height: 25vh;
+    padding: 1px;
+}
+
+.solidLine>:last-child {
+    width: 25vw;
+    height: 25vh;
+    padding: 1px;
+    border-right: 1px solid white;
+}
+
+.signUpCoverPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signUpCoverPage>div>input {
+    width: 9.5vw;
+    height: 4vh;
+    border-radius: 5px;
+    margin-left: 0.1px;
+    margin-bottom: 10px;
+    border-width: 1.5px;
+}
+
+.signUpCoverPage>input {
+    width: 20vw;
+    height: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-width: 1.5px;
+}
+
+.signUpCoverPage>.defaultbutton {
+    position: relative;
+    width: 21vw;
+    height: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.signUpCoverPage>.defaultbutton>svg {
+    position: absolute;
+    right: 5%;
+}
+
+.signUpCoverPage>:last-child>.socialMedia {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.signUpCoverPage>:last-child>.socialMedia>img {
+    background-color: white;
+    width: 120px;
+    height: 160px;
+    border-radius: 15px;
+}
+
+
+/* cover page ended */
