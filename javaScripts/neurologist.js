@@ -28,7 +28,34 @@ function addEventListenerToSorters(){
     });
 }
 
-function sortByPercent(){
+function sortById(event){
+    var lastElement = document.getElementsByClassName("sorting-choice-active")[0]
+    lastElement.className = "sorting-choice"
+    // color of option chang to blue
+    event.target.className = "sorting-choice-active"
+
+    //first delete all things
+    allDr = document.querySelectorAll(".dr")
+    allDr.forEach(element=>{
+        parentNode.removeChild(element)
+    });
+
+    for(var i=0 ; i<data.length;i++){
+        makeDr(data[i])
+    }
+
+}
+
+function sortByPercent(event){
+    // last button get blue
+    // listener of sort by id set in first time that you click on sortBypercent
+    var lastElement = document.getElementsByClassName("sorting-choice-active")[0]
+    lastElement.className = "sorting-choice"
+    lastElement.addEventListener("click",sortById)
+    
+
+    // color of option chang to blue
+    event.target.className = "sorting-choice-active"
     //first delete all things
     allDr = document.querySelectorAll(".dr")
     allDr.forEach(element=>{
@@ -47,8 +74,8 @@ function sortByPercent(){
             }
         }
         capturedIndexes.push(target)
-        console.log(target)
-        console.log(data[target])
+        // console.log(target)
+        // console.log(data[target])
         makeDr(data[target])
     }
 }
