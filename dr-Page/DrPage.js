@@ -13,7 +13,7 @@ comments = ""
 comment_text = ""
 address = ""
 phone = ""
-week_days = ""
+week_days = []
 
 function applyData() {
     picElement = document.getElementById("DrPic")
@@ -46,8 +46,26 @@ function applyData() {
     document.getElementById("phone").innerHTML = phone
     document.getElementById("address").innerHTML = address
 
+    var days = document.getElementsByClassName("day")
+    for (i = 0; i < days.length; i++) {
+        if (week_days[i] == true) {
+
+            days[i].getElementsByClassName("tik")[0].classList.add("appear");
+            days[i].getElementsByClassName("tik")[0].classList.remove("hidden");
+
+            days[i].getElementsByClassName("untik")[0].classList.remove("appear");
+            days[i].getElementsByClassName("untik")[0].classList.add("hidden");
 
 
+        } else {
+
+            days[i].getElementsByClassName("untik")[0].classList.add("appear");
+            days[i].getElementsByClassName("untik")[0].classList.remove("hidden");
+
+            days[i].getElementsByClassName("tik")[0].classList.remove("appear");
+
+        }
+    }
 }
 
 function fetchDrPAgeData(ID) {
