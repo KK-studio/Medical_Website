@@ -63,6 +63,7 @@ function applyData() {
             days[i].getElementsByClassName("untik")[0].classList.remove("hidden");
 
             days[i].getElementsByClassName("tik")[0].classList.remove("appear");
+            days[i].getElementsByClassName("tik")[0].classList.add("hidden");
 
         }
     }
@@ -95,3 +96,24 @@ function fetchDrPAgeData(ID) {
 
 }
 fetchDrPAgeData("2");
+document.getElementById("middle-Part-loaction-title2").onclick = () => {
+    document.getElementById("middle-Part-loaction-title2").style.backgroundColor = "white";
+    document.getElementById("middle-Part-loaction-title1").style.backgroundColor = "lightblue";
+
+    document.getElementById("middle-Part-loaction-content-days").classList.add("appear");
+    document.getElementById("middle-Part-loaction-content-days").classList.remove("hidden");
+    document.getElementById("middle-Part-loaction-content").classList.add("hidden");
+    document.getElementById("middle-Part-loaction-content").classList.remove("appear");
+}
+
+document.getElementById("middle-Part-loaction-title1").onclick = () => {
+    document.getElementById("middle-Part-loaction-title1").style.backgroundColor = "white";
+    document.getElementById("middle-Part-loaction-title2").style.backgroundColor = "lightblue";
+
+    document.getElementById("middle-Part-loaction-content-days").classList.add("hidden");
+    document.getElementById("middle-Part-loaction-content-days").classList.remove("appear");
+    document.getElementById("middle-Part-loaction-content").classList.add("appear");
+    document.getElementById("middle-Part-loaction-content").classList.remove("hidden");
+
+
+}
