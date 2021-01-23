@@ -23,7 +23,7 @@ body {
     background-color: #FAFAFA;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -297,6 +297,7 @@ body {
     color: white;
 }
 
+
 /* #middle-Part-drInfo-top-share:hover {
     fill: #fb815e;
     color: #fb815e;
@@ -531,6 +532,21 @@ body {
     fill: red;
 }
 
+#middle-Part-loaction-content-days {
+    margin-top: 7%;
+    margin-right: 5%;
+    display: flex;
+    align-content: center;
+}
+
+.day {
+    margin-left: 1vw;
+    position: relative;
+    border: 1px lightblue solid;
+    padding: 15px;
+    border-radius: 15px;
+}
+
 #middle-Part-loaction-content {
     margin-top: 7%;
     display: grid;
@@ -545,23 +561,19 @@ body {
     height: 90%;
 }
 
-
-
-
-#middle-Part-userComments{
-   position: relative;
-   margin-top: 40px;
-   border-radius: 10px;
-   /* height: 100vh; */
-   width: 100%; 
-   /* border-color: #ced4da; */
-   border: 1px solid #dbdbdb;
-   padding-bottom: 10px;
-   margin-bottom: 20px;
-   
+#middle-Part-userComments {
+    position: relative;
+    margin-top: 40px;
+    border-radius: 10px;
+    /* height: 100vh; */
+    width: 100%;
+    /* border-color: #ced4da; */
+    border: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-#middle-Part-userComments-header{
+#middle-Part-userComments-header {
     position: relative;
     height: 55px;
     width: 100%;
@@ -569,18 +581,18 @@ body {
     border-bottom: 1px solid #ededed;
 }
 
-#middle-Part-userComments-header>svg{
+#middle-Part-userComments-header>svg {
     position: absolute;
     right: 1%;
     top: 10%;
 }
 
-#middle-Part-userComments-header-content{
+#middle-Part-userComments-header-content {
     position: absolute;
     right: 5%;
 }
 
-#middle-Part-userComments-votes{
+#middle-Part-userComments-votes {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 4%;
@@ -591,60 +603,59 @@ body {
     position: relative;
 }
 
-#middle-Part-userComments-votes-left>svg{
+#middle-Part-userComments-votes-left>svg {
     display: inline;
     position: relative;
 }
 
-#middle-Part-userComments-votes-left>p{
+#middle-Part-userComments-votes-left>p {
     display: inline;
     position: relative;
     top: -1vh;
     font-size: 12px;
 }
 
-#middle-Part-userComments-votes-left-avgTime{
+#middle-Part-userComments-votes-left-avgTime {
     font-size: 12px;
     color: #3b4157;
     margin-right: 15%;
 }
 
-#middle-Part-userComments-votes-right>svg{
+#middle-Part-userComments-votes-right>svg {
     display: inline;
     position: relative;
 }
 
-#middle-Part-userComments-votes-right>p{
+#middle-Part-userComments-votes-right>p {
     display: inline;
     position: relative;
     top: -1vh;
     font-size: 12px;
 }
 
-
-#middle-Part-userComments-votes-right-points-1{
+#middle-Part-userComments-votes-right-points-1 {
     position: relative;
 }
 
-#middle-Part-userComments-votes-right-points-2{
+#middle-Part-userComments-votes-right-points-2 {
     position: relative;
 }
 
-#middle-Part-userComments-votes-right-points-3{
+#middle-Part-userComments-votes-right-points-3 {
     position: relative;
 }
 
-#middle-Part-userComments-votes-right-points-4{
+#middle-Part-userComments-votes-right-points-4 {
     position: relative;
 }
 
-#middle-Part-userComments-votes-right-points-5{
+#middle-Part-userComments-votes-right-points-5 {
     margin-top: 5%!important;
     position: relative;
 }
 
-.points-rows-progressBar-fill{
-    position:absolute;
+.points-rows-progressBar-fill {
+    position: absolute;
     right: 0;
     border-radius: 10px;
     width: 50%;
@@ -652,24 +663,24 @@ body {
     background-color: blue;
 }
 
-.points-rows{
+.points-rows {
     position: relative;
     margin-top: 14%;
 }
 
-.points-rows-right{
+.points-rows-right {
     font-size: 10px;
     position: absolute;
     right: 1%;
 }
 
-.points-rows-left{
+.points-rows-left {
     font-size: 10px;
     position: absolute;
     left: 1%;
 }
 
-.points-rows-progressBar{
+.points-rows-progressBar {
     position: relative;
     top: 7px;
     margin-left: 10%;
@@ -680,7 +691,7 @@ body {
     border-radius: 10px;
 }
 
-#middle-Part-userComments-sorting{
+#middle-Part-userComments-sorting {
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -688,10 +699,9 @@ body {
     height: 5vh;
     width: 90%;
     border-radius: 10px;
-
 }
 
-#middle-Part-userComments-sorting-grid{
+#middle-Part-userComments-sorting-grid {
     position: relative;
     width: 95%;
     display: grid;
@@ -699,27 +709,28 @@ body {
     gap: 10px;
 }
 
-#middle-Part-userComments-sorting-grid-rightElement>svg{
+#middle-Part-userComments-sorting-grid-rightElement>svg {
     position: absolute;
     top: 2px;
     right: 5px;
 }
 
-#middle-Part-userComments-sorting-grid-rightElement>h1{
-    margin-right: 20%;;
+#middle-Part-userComments-sorting-grid-rightElement>h1 {
+    margin-right: 20%;
+    ;
     display: inline;
     font-size: 12px;
     font-weight: bold;
 }
 
-.middle-Part-userComments-sorting-choice{
+.middle-Part-userComments-sorting-choice {
     margin-top: 7px;
     color: #6e7794;
     font-size: 12px;
     text-align: center;
 }
 
-.middle-Part-userComments-sorting-choice-active{
+.middle-Part-userComments-sorting-choice-active {
     margin-top: 7px;
     color: white;
     background-color: blue;
@@ -728,14 +739,14 @@ body {
     border-radius: 10px;
 }
 
-#middle-Part-userComments-peopleComments{
+#middle-Part-userComments-peopleComments {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     width: 90%;
 }
 
-.middle-Part-userComments-peopleComments-box{
+.middle-Part-userComments-peopleComments-box {
     height: 25vh;
     width: 100%;
     border-radius: 10px;
@@ -744,7 +755,7 @@ body {
     margin-bottom: 10px;
 }
 
-.middle-Part-userComments-peopleComments-box-header{
+.middle-Part-userComments-peopleComments-box-header {
     position: relative;
     display: block;
     width: 100%;
@@ -753,11 +764,11 @@ body {
     background-color: #ededed;
 }
 
-.middle-Part-userComments-peopleComments-box-header>svg{
+.middle-Part-userComments-peopleComments-box-header>svg {
     position: absolute;
 }
 
-.middle-Part-userComments-peopleComments-box-header-owner{
+.middle-Part-userComments-peopleComments-box-header-owner {
     position: absolute;
     right: 7%;
     font-size: 9px;
@@ -765,21 +776,22 @@ body {
     color: #6e7794;
 }
 
-.middle-Part-userComments-peopleComments-box-header-points{
+.middle-Part-userComments-peopleComments-box-header-points {
     position: absolute;
     color: green;
-    left: 2%; 
+    left: 2%;
     top: 55%;
     font-size: 8px;
 }
 
 
 /* find second svg in the header of comments */
-.middle-Part-userComments-peopleComments-box-header > svg:nth-child(3){
+
+.middle-Part-userComments-peopleComments-box-header>svg:nth-child(3) {
     cursor: pointer;
 }
 
-.middle-Part-userComments-peopleComments-box-whiteSpace{
+.middle-Part-userComments-peopleComments-box-whiteSpace {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 3fr;
@@ -789,90 +801,41 @@ body {
     margin-left: 20px;
 }
 
-.middle-Part-userComments-peopleComments-box-whiteSpace>p{
+.middle-Part-userComments-peopleComments-box-whiteSpace>p {
     font-size: 12px;
     color: #3b4157;
     text-align: justify;
 }
 
-.middle-Part-userComments-peopleComments-box-whiteSpace-reason{
+.middle-Part-userComments-peopleComments-box-whiteSpace-reason {
     font-size: 14px;
     color: #6e7794;
 }
 
-.middle-Part-userComments-peopleComments-box-whiteSpace-starsOn{
+.middle-Part-userComments-peopleComments-box-whiteSpace-starsOn {
     fill: #1780df;
     color: #1780df;
 }
 
-
-
-.middle-Part-userComments-peopleComments-box-whiteSpace>div>h1{
+.middle-Part-userComments-peopleComments-box-whiteSpace>div>h1 {
     font-size: 11px;
     position: relative;
     top: 5%;
 }
 
-
-#middle-Part-drInfo-top-like>svg:hover{
+#middle-Part-drInfo-top-like>svg:hover {
     fill: orange;
 }
 
-#middle-Part-drInfo-top-share:hover *{
+#middle-Part-drInfo-top-share:hover * {
     fill: orange;
     color: orange;
 }
 
+
 /* #middle-Part-drInfo-top-share * :hover{
     fill: orange;
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* شروع بخش هایی کپی پیستی */
@@ -1249,4 +1212,12 @@ body {
 #endBluePart-middlePart-rightSide {
     position: relative;
     top: -8%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.appear {
+    display: block;
 }
