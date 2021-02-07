@@ -16,6 +16,7 @@ for(var i =0 ; i<7 ; i++){
 main();
 
 function main(){
+    loadCurrentDate();
     console.log("hello");
     console.log(days);
 
@@ -129,4 +130,32 @@ function makeRequest(method, url, data) {
     });
 }
 
+function loadCurrentDate(){
+    var phone =localStorage.getItem("UserPhonNemerDarmankade");
+    console.log("saved PhoneNember : " +  phone);
 
+    makeRequest('GET', "http://127.0.0.1:8000/polls/user/getDoc/"+phone).then(function(data) {
+        alert(data);
+        if (data != null) {
+            var result = JSON.parse(data);
+            g_name.value = data["name"];
+            g_password.value = data["password"];
+            g_phone.value = data["phone"];
+            g_Specialty.value = data["spec"];
+            g_expreince_years.value = data["experience_years"];
+            g_number.value = data["number"];
+            g_online_pay = data["online_pay"];
+            var boolDays = data["week_days"]
+            console.log("array true false : " + boolDays);
+            for(var j=0 ; j<boolDays.length ; j++){
+                if(boolDays[j]){
+                    days[j].style.color = "white";
+                    days[j].style.backgroundColor = "black";
+                }
+            }
+
+        } else {
+            location.reload();
+        }
+    });
+}

@@ -3,6 +3,7 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 const submitLogin = document.getElementById("signInSubmit");
 const submitSignUp = document.getElementById("signUpSubmit");
+var lastPhonNumer ;
 
 signUpButton.addEventListener('click', () => {
     container.classList.add("right-panel-active");
