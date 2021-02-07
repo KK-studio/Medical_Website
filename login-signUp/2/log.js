@@ -22,9 +22,8 @@ submitLogin.addEventListener('click',(e)=>{
 	console.log(sendData);
 
 	makeRequest('POST', "https://www.codegrepper.com/endpoint.php?param1=yoyoma",sendData).then(function(data){
-		var results=JSON.parse(data);
-		if(results["state"] == true){
-			//to do  login
+		if(data == "ok"){
+			console.log("ok")
 		}else{
 			location.reload();
 		}
@@ -40,12 +39,17 @@ submitSignUp.addEventListener('click',(e)=>{
 
 
 	makeRequest('POST', "https://www.codegrepper.com/endpoint.php?param1=yoyoma",sendData).then(function(data){
-		var results=JSON.parse(data);
-		if(results["state"] == true){
-			//to do  login
+		if(data == "ok"){
+			console.log("ok")
 		}else{
 			location.reload();
 		}
+		var results=JSON.parse(data);
+		// if(results["state"] == true){
+		// 	//to do  login
+		// }else{
+		// 	location.reload();
+		// }
   });
 
 });
