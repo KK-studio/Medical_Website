@@ -83,7 +83,7 @@ function upload(e){
         week_days : daysStat
     }
     console.log(JSON.stringify(sendData));
-    makeRequest('POST', "http://127.0.0.1:8000/polls/user/editDoc", sendData).then(function(data) {
+    makeRequest('POST', "http://127.0.0.1:8000/polls/user/editDoc", JSON.stringify(sendData)).then(function(data) {
         window.alert("hi" + data)
         if (data == "ok") {
             console.log("ok")
