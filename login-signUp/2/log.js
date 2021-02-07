@@ -38,18 +38,18 @@ submitSignUp.addEventListener('click', (e) => {
 
 
     makeRequest('POST', "http://127.0.0.1:8000/polls/user/signup", sendData).then(function(data) {
-        // window.alert("hi" + data)
-        // if (data == "ok") {
-        //     console.log("ok")
-        // } else {
-        //     location.reload();
-        // }
-        var results = JSON.parse(data);
-        if (results["state"] == true) {
-            //to do  login
+        window.alert("hi" + data)
+        if (data == "ok") {
+            console.log("ok")
         } else {
             location.reload();
         }
+        // var results = JSON.parse(data);
+        // if (results["state"] == true) {
+        //     //to do  login
+        // } else {
+        //     location.reload();
+        // }
     });
 
 });
