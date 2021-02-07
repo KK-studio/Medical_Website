@@ -14,10 +14,12 @@ signInButton.addEventListener('click', () => {
 });
 
 submitLogin.addEventListener('click',(e)=>{
+	console.log("sign in");
 	e.preventDefault();
 	var myForm = document.getElementById("loginForm");
-	console.log(myForm.elements[0].value +" -"+ myForm.elements[1].value)
+	
 	var sendData = `{"phone":${myForm.elements[0].value} , "password":${myForm.elements[1].value}}`
+	console.log(sendData);
 
 	makeRequest('POST', "https://www.codegrepper.com/endpoint.php?param1=yoyoma",sendData).then(function(data){
 		var results=JSON.parse(data);
@@ -30,10 +32,12 @@ submitLogin.addEventListener('click',(e)=>{
 });
 
 submitSignUp.addEventListener('click',(e)=>{
+	console.log("sign up");
 	e.preventDefault();
 	var myForm = document.getElementById("loginForm");
-	console.log(myForm.elements[0].value +" -"+ myForm.elements[1].value)
-	var sendData = `{"name":${myForm.elements[1].value},"phone":${myForm.elements[1].value} , "pass":${myForm.elements[2].value}}`
+	var sendData = `{"name":${myForm.elements[1].value} , "phone":${myForm.elements[1].value} , "pass":${myForm.elements[2].value}}`
+	console.log(sendData);
+
 
 	makeRequest('POST', "https://www.codegrepper.com/endpoint.php?param1=yoyoma",sendData).then(function(data){
 		var results=JSON.parse(data);
