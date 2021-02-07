@@ -3,6 +3,7 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 const submitLogin = document.getElementById("signInSubmit");
 const submitSignUp = document.getElementById("signUpSubmit");
+var lastPhonNumer ;
 
 signUpButton.addEventListener('click', () => {
     container.classList.add("right-panel-active");
@@ -17,12 +18,14 @@ submitLogin.addEventListener('click', (e) => { //login
     e.preventDefault();
     var myForm = document.getElementById("loginForm");
 
-    var sendData = `{"phone":"${myForm.elements[0].value}" , "password":"${myForm.elements[1].value}"}`
+    var sendData = `{"phone":"${myForm.elements[0].value}" , "password":"${myForm.elements[1].value}"}`;
     console.log(sendData);
+    lastPhonNumer = myForm.elements[0].value;
 
     makeRequest('POST', "http://127.0.0.1:8000/polls/user/docSignup", sendData).then(function(data) {
         if (data == "ok") {
             console.log("ok")
+            localStorage.setItem("DRphonNemerDarmankade", lastPhonNumer);
         } else {
             location.reload();
         }
@@ -35,12 +38,13 @@ submitSignUp.addEventListener('click', (e) => {
     var myForm = document.getElementById("signupForm");
     var sendData = `{"name":"${myForm.elements[0].value}" , "phone":"${myForm.elements[1].value}" , "password":"${myForm.elements[2].value}"}`
     console.log(sendData);
-
+    lastPhonNumer = myForm.elements[1].value;
 
     makeRequest('POST', "http://127.0.0.1:8000/polls/user/docSignup", sendData).then(function(data) {
         window.alert("hi" + data)
         if (data == "ok") {
-            console.log("ok")
+            console.log("ok");
+            localStorage.setItem("DRphonNemerDarmankade", lastPhonNumer);
         } else {
             location.reload();
         }
