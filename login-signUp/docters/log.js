@@ -12,15 +12,15 @@ signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
 
-submitLogin.addEventListener('click', (e) => {
+submitLogin.addEventListener('click', (e) => { //login
     console.log("sign in");
     e.preventDefault();
     var myForm = document.getElementById("loginForm");
 
-    var sendData = `{"phone":${myForm.elements[0].value} , "password":${myForm.elements[1].value}}`
+    var sendData = `{"phone":"${myForm.elements[0].value}" , "password":"${myForm.elements[1].value}"}`
     console.log(sendData);
 
-    makeRequest('POST', "http://127.0.0.1:8000/polls/user/signup", sendData).then(function(data) {
+    makeRequest('POST', "http://127.0.0.1:8000/polls/user/docSignup", sendData).then(function(data) {
         if (data == "ok") {
             console.log("ok")
         } else {
@@ -37,7 +37,7 @@ submitSignUp.addEventListener('click', (e) => {
     console.log(sendData);
 
 
-    makeRequest('POST', "http://127.0.0.1:8000/polls/user/signup", sendData).then(function(data) {
+    makeRequest('POST', "http://127.0.0.1:8000/polls/user/docSignup", sendData).then(function(data) {
         window.alert("hi" + data)
         if (data == "ok") {
             console.log("ok")
