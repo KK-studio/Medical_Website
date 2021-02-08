@@ -1,4 +1,5 @@
 API = "https://intense-ravine-40625.herokuapp.com/doctors/"
+comment_Array = []
 Number = ""
 Name = ""
 spec = ""
@@ -15,6 +16,23 @@ address = ""
 phone = ""
 week_days = []
 
+parentNode= document.getElementById("middle-Part-userComments-peopleComments");
+templateNode = parentNode.getElementsByClassName("middle-Part-userComments-peopleComments-box")[0]
+console.log(templateNode)
+
+function applyComments(){
+    allComment = parentNode.querySelectorAll(".middle-Part-userComments-peopleComments-box")
+    allComment.forEach(element=>{
+        parentNode.removeChild(element)
+    });
+    comment_Array.forEach(element => {
+        var clone = templateNode.cloneNode(true);
+        clone.getElementsByClassName("middle-Part-userComments-peopleComments-box-header-owner")[0].innerHTML = element.name
+        clone.getElementsByClassName("matn-comment")[0].innerHTML = element.comment
+        parentNode.appendChild(clone)
+    });
+}
+
 function applyData() {
     picElement = document.getElementById("DrPic")
     picElement.src = avatar
@@ -27,9 +45,9 @@ function applyData() {
     document.getElementById("experience_years").innerHTML = experience_years
     document.getElementById("first_empty_date").innerHTML = first_empty_date
     if (online_pay) {
-        document.getElementById("number").innerHTML = "دارد"
+        document.getElementById("online_pay").innerHTML = "دارد"
     } else {
-        document.getElementById("number").innerHTML = "ندارد"
+        document.getElementById("online_pay").innerHTML = "ندارد"
 
     }
     document.getElementById("comment_text").innerHTML = comment_text
@@ -112,15 +130,19 @@ function fetchDrPAgeDataWithPhone(input) {
                 online_pay = data["online_pay"]
                 // first_empty_date = data["first_empty_date"]
                 experience_years = data["experience_years"]
-                rate = data["score"]
+                rate = parseInt(data["score"] * 5 );
                 stars = parseInt(parseFloat(stars))
-                // commenter = data["commenter"]
-                comments = data["comments"]
+                comments = data["scores_count"]
                 comment_text = data["last_Comment"]
                 address = data["address"]
                 phone = data["phone"]
                 week_days = data["week_days"]
+                comment_Array = data["comments"]
+                if(comment_Array.length>0){
+                    commenter = comment_Array[comment_Array.length-1].name
+                }
                 applyData()
+                applyComments()
             })
 
 }

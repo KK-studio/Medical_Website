@@ -7,7 +7,6 @@ const search_URL = "http://127.0.0.1:8000/polls/user/SearchDoc/name="
 const specialies = ["فوق تخصص کبد","فوق تخصص جمجمه شناسی ","روانشناس","ارتوپد"]
 const search_string = document.getElementById("search_DR_name");
 const search_button = document.getElementById("searchButton");
-
 var drTemplate
 var parentNode
 var data
