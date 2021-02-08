@@ -77,9 +77,9 @@ function loadCurrentDate(){
         alert(data);
         if (data != null) {
             var result = JSON.parse(data);
-            g_name.value = data["name"];
-            g_password.value = data["password"]
-            g_phone.value = data["phone"]
+            g_name.value = result["name"];
+            g_password.value = result["password"]
+            g_phone.value = result["phone"]
 
         } else {
             location.reload();
