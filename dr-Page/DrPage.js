@@ -95,7 +95,45 @@ function fetchDrPAgeData(ID) {
             })
 
 }
-fetchDrPAgeData("2");
+
+function fetchDrPAgeDataWithPhone(input) {
+    URL = "http://127.0.0.1:8000/polls/user/getDoc/" + input + "/"
+    console.log(URL)
+    fetch(URL)
+        .then((resp) => resp.json())
+        .then(
+            (input) => {
+                console.log(input)
+                data = input
+                Number = data["number"]
+                Name = data["name"]
+                spec = data["spec"]
+                avatar = data["avatar"]
+                online_pay = data["online_pay"]
+                // first_empty_date = data["first_empty_date"]
+                experience_years = data["experience_years"]
+                rate = data["score"]
+                stars = parseInt(parseFloat(stars))
+                // commenter = data["commenter"]
+                comments = data["comments"]
+                comment_text = data["last_Comment"]
+                address = data["address"]
+                phone = data["phone"]
+                week_days = data["week_days"]
+                applyData()
+            })
+
+}
+var url_string = window.location.search;
+const urlParams = new URLSearchParams(url_string);
+const phoneDr = urlParams.get('phone')
+console.log(phoneDr)
+if(phoneDr){
+    console.log("send")
+    fetchDrPAgeDataWithPhone(phoneDr);
+}else{
+    fetchDrPAgeData("2");
+}
 document.getElementById("middle-Part-loaction-title2").onclick = () => {
     document.getElementById("middle-Part-loaction-title2").style.backgroundColor = "white";
     document.getElementById("middle-Part-loaction-title1").style.backgroundColor = "lightblue";
@@ -114,6 +152,4 @@ document.getElementById("middle-Part-loaction-title1").onclick = () => {
     document.getElementById("middle-Part-loaction-content-days").classList.remove("appear");
     document.getElementById("middle-Part-loaction-content").classList.add("appear");
     document.getElementById("middle-Part-loaction-content").classList.remove("hidden");
-
-
 }
