@@ -451,13 +451,11 @@ body {
 
 /* after drop down activated presentation setting */
 
-
-/* 
 .afterClickActive {
     display: none;
     z-index: 1;
     top: 0px;
-} */
+}
 
 
 /* after selection dropdown new elemnt will be activated */
@@ -470,12 +468,11 @@ body {
     display: block;
 }
 
-
-/* .afterClickActive:hover {
+.afterClickActive:hover {
     display: block;
-} */
+}
 
-.afterClickHidden {
+.afterClickActive:hover~.afterClickHidden {
     display: none;
 }
 
