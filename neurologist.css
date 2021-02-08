@@ -205,7 +205,7 @@ body {
     font-size: 12px;
     text-align: center;
     border-radius: 5px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
@@ -451,11 +451,13 @@ body {
 
 /* after drop down activated presentation setting */
 
+
+/* 
 .afterClickActive {
     display: none;
     z-index: 1;
     top: 0px;
-}
+} */
 
 
 /* after selection dropdown new elemnt will be activated */
@@ -468,11 +470,12 @@ body {
     display: block;
 }
 
-.afterClickActive:hover {
-    display: block;
-}
 
-.afterClickActive:hover~.afterClickHidden {
+/* .afterClickActive:hover {
+    display: block;
+} */
+
+.afterClickHidden {
     display: none;
 }
 
