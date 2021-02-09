@@ -131,10 +131,10 @@ function makeRequest(method, url, data) {
 }
 
 function loadCurrentDate(){
-    var phone =localStorage.getItem("UserPhonNemerDarmankade");
+    var phone =localStorage.getItem("DRphonNemerDarmankade");
     console.log("saved PhoneNember : " +  phone);
 
-    makeRequest('GET', "http://127.0.0.1:8000/polls/user/getDoc/"+phone).then(function(data) {
+    makeRequest('POST', "http://127.0.0.1:8000/polls/user/getDoc/"+phone+"/").then(function(data) {
         alert(data);
         if (data != null) {
             var result = JSON.parse(data);

@@ -73,7 +73,7 @@ function loadCurrentDate(){
     var phone =localStorage.getItem("UserPhonNemerDarmankade");
     console.log("saved PhoneNember : " +  phone);
 
-    makeRequest('GET', "http://127.0.0.1:8000/polls/user/getUser/"+phone).then(function(data) {
+    makeRequest('GET', "http://127.0.0.1:8000/polls/user/getUser/"+phone+"/").then(function(data) {
         alert(data);
         if (data != null) {
             var result = JSON.parse(data);

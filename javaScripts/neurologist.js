@@ -161,14 +161,17 @@ function searchFunction(inputName) { // second function for fetching
     //name specs[true , false ,]
     specsbools = []
     for(var i=0 ; i<4 ;i++){//loop over all spec of doctors and check state of them
-        target_id="checkbox" + i;
+        var target_id="checkbox" + i;
         specsbools.push(document.getElementById(target_id).checked)
     }
+    console.log(inputName)
 
     var sendData = {name:inputName , specs:specsbools}
-    
-    makeRequest('POST', "http://127.0.0.1:8000/polls/user/login", sendData).then(function(data) {
-        data = input
+    sendData = JSON.stringify(sendData)
+    console.log(sendData)
+    makeRequest('POST', "http://127.0.0.1:8000/polls/user/SearchDoc", sendData).then(function(data) {
+        console.log(data)
+        data = JSON.parse(data)
         listOfDoctors = data["result"]
         console.log(listOfDoctors)
         if (listOfDoctors.length == 1) {
@@ -197,50 +200,50 @@ function searchFunction(inputName) { // second function for fetching
 
                 clone.querySelector(".dr-leftSide-firstVisitTime").innerHTML = "شنبه"
                 parentNode.appendChild(clone)
-
             });
+        }
 
     // now we gor for fetching data and setup real page  OLD fetch system :)
-    fetch(targetUrl)
-        .then((resp) => resp.json())
-        .then(
-            (input) => {
-                data = input
-                listOfDoctors = data["result"]
-                console.log(listOfDoctors)
-                if (listOfDoctors.length == 1) {
-                    window.location.href = "./dr-Page/DR.html?phone=" + listOfDoctors[0].phone
-                } else {
-                    listOfDoctors.forEach(element => {
-                        var clone = drTemplate.cloneNode(true);
-                        clone.querySelector(".dr-rightSide>img").src = element.avatar // image
-                        clone.querySelector(".dr-centeral>h1").innerHTML = element.name
-                        clone.querySelector(".dr-centeral>h2").innerHTML = specialies[parseInt(element.spec)];
+    // fetch(targetUrl)
+    //     .then((resp) => resp.json())
+    //     .then(
+    //         (input) => {
+    //             data = input
+    //             listOfDoctors = data["result"]
+    //             console.log(listOfDoctors)
+    //             if (listOfDoctors.length == 1) {
+    //                 window.location.href = "./dr-Page/DR.html?phone=" + listOfDoctors[0].phone
+    //             } else {
+    //                 listOfDoctors.forEach(element => {
+    //                     var clone = drTemplate.cloneNode(true);
+    //                     clone.querySelector(".dr-rightSide>img").src = element.avatar // image
+    //                     clone.querySelector(".dr-centeral>h1").innerHTML = element.name
+    //                     clone.querySelector(".dr-centeral>h2").innerHTML = specialies[parseInt(element.spec)];
 
-                        //    stars
-                        var stars = clone.querySelectorAll(".dr-centeral-stars>svg")
-                        for (var i = 0; i < element.stars; i++) {
-                            stars[i].style.fill = "blue";
-                        }
+    //                     //    stars
+    //                     var stars = clone.querySelectorAll(".dr-centeral-stars>svg")
+    //                     for (var i = 0; i < element.stars; i++) {
+    //                         stars[i].style.fill = "blue";
+    //                     }
 
-                        // comments number
-                        clone.querySelector(".dr-centeral-stars>p").innerHTML = `(نظر ${element.scores_count})`
+    //                     // comments number
+    //                     clone.querySelector(".dr-centeral-stars>p").innerHTML = `(نظر ${element.scores_count})`
 
-                        clone.querySelector(".dr-centeral>p").innerHTML = element.last_Comment
+    //                     clone.querySelector(".dr-centeral>p").innerHTML = element.last_Comment
 
-                        clone.querySelector(".dr-leftSide-status>p:nth-child(2)").innerHTML = element.address
-                        clone.querySelector(".dr-leftSide-status>p:nth-child(5)").innerHTML = `تجربه کاری ${element.experience_years}سال`
-                        clone.querySelector(".dr-leftSide-status>p:nth-child(8)").innerHTML = `${element.score}درصد رضایت مشتری`
+    //                     clone.querySelector(".dr-leftSide-status>p:nth-child(2)").innerHTML = element.address
+    //                     clone.querySelector(".dr-leftSide-status>p:nth-child(5)").innerHTML = `تجربه کاری ${element.experience_years}سال`
+    //                     clone.querySelector(".dr-leftSide-status>p:nth-child(8)").innerHTML = `${element.score}درصد رضایت مشتری`
 
-                        clone.querySelector(".dr-leftSide-firstVisitTime").innerHTML = "شنبه"
-                        parentNode.appendChild(clone)
+    //                     clone.querySelector(".dr-leftSide-firstVisitTime").innerHTML = "شنبه"
+    //                     parentNode.appendChild(clone)
 
-                    });
-                }
-            }
-        )
+    //                 });
+    //             }
+    //         }
+    //     )
+    })
 }
-
 
 function makeDr(element) {
     var clone = drTemplate.cloneNode(true);
