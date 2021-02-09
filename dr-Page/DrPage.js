@@ -15,6 +15,7 @@ comment_text = ""
 address = ""
 phone = ""
 week_days = []
+const specialies = ["اعصاب و روان", "ارتوپد", "جراحی کمر", "غدد"]
 
 parentNode= document.getElementById("middle-Part-userComments-peopleComments");
 templateNode = parentNode.getElementsByClassName("middle-Part-userComments-peopleComments-box")[0]
@@ -125,7 +126,7 @@ function fetchDrPAgeDataWithPhone(input) {
                 data = input
                 Number = data["number"]
                 Name = data["name"]
-                spec = data["spec"]
+                spec = specialies[data["spec"]]
                 avatar = data["avatar"]
                 online_pay = data["online_pay"]
                 // first_empty_date = data["first_empty_date"]
@@ -146,10 +147,39 @@ function fetchDrPAgeDataWithPhone(input) {
             })
 
 }
+
+function addListeners(){
+    sendCommentButton.addEventListener('click',()=>{
+        console.log(SendCommentTextArea.value)
+        console.log(checkStarsComments())
+        console.log(phonNumberUser)
+    });
+}
+
+function checkStarsComments(){
+    for(var i = 1 ; i<6 ; i++){
+        if(document.getElementById(i+"").checked){
+            return i 
+        }
+    }
+    return 0 
+}
+
+
+//code starts from here
 var url_string = window.location.search;
 const urlParams = new URLSearchParams(url_string);
 const phoneDr = urlParams.get('phone')
-console.log(phoneDr)
+const sendCommentButton = document.getElementsByClassName("btn btn-success send btn-sm")[0]
+const SendCommentTextArea = document.getElementById("comment-text")
+const phonNumberUser = localStorage.getItem("UserPhonNemerDarmankade");
+// console.log(SendCommentText)
+
+
+
+addListeners()
+
+
 if(phoneDr){
     console.log("send")
     fetchDrPAgeDataWithPhone(phoneDr);
@@ -174,4 +204,32 @@ document.getElementById("middle-Part-loaction-title1").onclick = () => {
     document.getElementById("middle-Part-loaction-content-days").classList.remove("appear");
     document.getElementById("middle-Part-loaction-content").classList.add("appear");
     document.getElementById("middle-Part-loaction-content").classList.remove("hidden");
+}
+
+function makeRequest(method, url, data) {
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.onload = function() {
+            if (this.status >= 200 && this.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject({
+                    status: this.status,
+                    statusText: xhr.statusText
+                });
+            }
+        };
+        xhr.onerror = function() {
+            reject({
+                status: this.status,
+                statusText: xhr.statusText
+            });
+        };
+        if (method == "POST" && data) {
+            xhr.send(data);
+        } else {
+            xhr.send();
+        }
+    });
 }
