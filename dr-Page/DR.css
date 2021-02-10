@@ -813,7 +813,7 @@ body {
 }
 
 .middle-Part-userComments-peopleComments-box-whiteSpace-starsOn {
-    fill: #1780df;
+    fill: #1780df  !important;
     color: #1780df;
 }
 

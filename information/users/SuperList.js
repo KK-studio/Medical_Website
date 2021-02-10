@@ -29,12 +29,6 @@ function upload(e){
         } else {
             location.reload();
         }
-        // var results = JSON.parse(data);
-        // if (results["state"] == true) {
-        //     //to do  login
-        // } else {
-        //     location.reload();
-        // }
     });
 }
 

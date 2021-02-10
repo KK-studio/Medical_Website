@@ -30,6 +30,23 @@ function applyComments(){
         var clone = templateNode.cloneNode(true);
         clone.getElementsByClassName("middle-Part-userComments-peopleComments-box-header-owner")[0].innerHTML = element.name
         clone.getElementsByClassName("matn-comment")[0].innerHTML = element.comment
+        
+        //find all stars :)
+        let current = clone.querySelector('.middle-Part-userComments-peopleComments-box-whiteSpace-reason');
+        let nextSibling = current.nextElementSibling;
+        var stars = [];
+        while(nextSibling) {
+            console.log(nextSibling);
+            stars.push(nextSibling)   
+            nextSibling = nextSibling.nextElementSibling;
+        }
+        for(var i = 0 ; i<5 ; i++){
+            if(element.score > i){
+                stars[i].classList.add('middle-Part-userComments-peopleComments-box-whiteSpace-starsOn');
+            }else{
+                stars[i].classList.remove('middle-Part-userComments-peopleComments-box-whiteSpace-starsOn');
+            }
+        }
         parentNode.appendChild(clone)
     });
 }
@@ -150,9 +167,22 @@ function fetchDrPAgeDataWithPhone(input) {
 
 function addListeners(){
     sendCommentButton.addEventListener('click',()=>{
-        console.log(SendCommentTextArea.value)
-        console.log(checkStarsComments())
-        console.log(phonNumberUser)
+        console.log("we catch ok : " + phoneDr)
+        if(phoneDr){
+            console.log(SendCommentTextArea.value)
+            console.log(checkStarsComments())
+            console.log(phonNumberUser)
+            var sendData = {doc_phone : phoneDr ,phone : phonNumberUser , comment: SendCommentTextArea.value , score: checkStarsComments()}
+            console.log(JSON.stringify(sendData))
+            makeRequest('POST', "http://127.0.0.1:8000/polls/user/addComment", JSON.stringify(sendData)).then(function(data) {
+            window.alert("hi" + data)
+            data = JSON.parse(data)
+            //final to do 
+            comment_Array = data["comments"]
+            applyComments()
+            });
+        }
+        
     });
 }
 
