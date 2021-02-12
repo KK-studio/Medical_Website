@@ -133,19 +133,6 @@ function getIntialData() {
                     parentNode.appendChild(clone)
 
                 });
-
-                // var clone = elem.cloneNode(true);
-                // console.log(clone)
-
-                // listOfShips.forEach(element => {
-                //     document.getElementById("leftMenu").innerHTML += `<div class="menuContent">${element.name}</div>`
-                // });
-
-                // var rows = document.getElementsByClassName("menuContent")
-
-                // for(var i= 0 ; i < rows.length;i++){
-                //     rows[i].addEventListener('click',clickedShip)
-                // }
             }
         )
 }
@@ -185,7 +172,7 @@ function searchFunction(inputName) { // second function for fetching
 
                 //    stars
                 var stars = clone.querySelectorAll(".dr-centeral-stars>svg")
-                for (var i = 0; i < element.stars; i++) {
+                for (var i = 0; i < element.score; i++) {
                     stars[i].style.fill = "blue";
                 }
 
@@ -202,46 +189,6 @@ function searchFunction(inputName) { // second function for fetching
                 parentNode.appendChild(clone)
             });
         }
-
-    // now we gor for fetching data and setup real page  OLD fetch system :)
-    // fetch(targetUrl)
-    //     .then((resp) => resp.json())
-    //     .then(
-    //         (input) => {
-    //             data = input
-    //             listOfDoctors = data["result"]
-    //             console.log(listOfDoctors)
-    //             if (listOfDoctors.length == 1) {
-    //                 window.location.href = "./dr-Page/DR.html?phone=" + listOfDoctors[0].phone
-    //             } else {
-    //                 listOfDoctors.forEach(element => {
-    //                     var clone = drTemplate.cloneNode(true);
-    //                     clone.querySelector(".dr-rightSide>img").src = element.avatar // image
-    //                     clone.querySelector(".dr-centeral>h1").innerHTML = element.name
-    //                     clone.querySelector(".dr-centeral>h2").innerHTML = specialies[parseInt(element.spec)];
-
-    //                     //    stars
-    //                     var stars = clone.querySelectorAll(".dr-centeral-stars>svg")
-    //                     for (var i = 0; i < element.stars; i++) {
-    //                         stars[i].style.fill = "blue";
-    //                     }
-
-    //                     // comments number
-    //                     clone.querySelector(".dr-centeral-stars>p").innerHTML = `(نظر ${element.scores_count})`
-
-    //                     clone.querySelector(".dr-centeral>p").innerHTML = element.last_Comment
-
-    //                     clone.querySelector(".dr-leftSide-status>p:nth-child(2)").innerHTML = element.address
-    //                     clone.querySelector(".dr-leftSide-status>p:nth-child(5)").innerHTML = `تجربه کاری ${element.experience_years}سال`
-    //                     clone.querySelector(".dr-leftSide-status>p:nth-child(8)").innerHTML = `${element.score}درصد رضایت مشتری`
-
-    //                     clone.querySelector(".dr-leftSide-firstVisitTime").innerHTML = "شنبه"
-    //                     parentNode.appendChild(clone)
-
-    //                 });
-    //             }
-    //         }
-    //     )
     })
 }
 

@@ -5,6 +5,10 @@ const submitLogin = document.getElementById("signInSubmit");
 const submitSignUp = document.getElementById("signUpSubmit");
 var lastPhonNumer ;
 
+
+
+//setup all event listeners of the page
+
 signUpButton.addEventListener('click', () => {
     container.classList.add("right-panel-active");
 });
@@ -12,6 +16,7 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
+
 
 submitLogin.addEventListener('click', (e) => { //login
     console.log("sign in");
@@ -48,16 +53,12 @@ submitSignUp.addEventListener('click', (e) => {
         } else {
             location.reload();
         }
-        // var results = JSON.parse(data);
-        // if (results["state"] == true) {
-        //     //to do  login
-        // } else {
-        //     location.reload();
-        // }
     });
 
 });
 
+
+//request system for js 
 function makeRequest(method, url, data) {
     return new Promise(function(resolve, reject) {
         var xhr = new XMLHttpRequest();

@@ -16,7 +16,7 @@ function main(){
 
 
 
-
+//go to neurologist
 function redirectToDoctorsPage(){
     window.location.href = "neurologist.html";
 }

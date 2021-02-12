@@ -21,6 +21,7 @@ parentNode= document.getElementById("middle-Part-userComments-peopleComments");
 templateNode = parentNode.getElementsByClassName("middle-Part-userComments-peopleComments-box")[0]
 console.log(templateNode)
 
+//refresh page dynamiclly
 function applyComments(){
     allComment = parentNode.querySelectorAll(".middle-Part-userComments-peopleComments-box")
     allComment.forEach(element=>{
@@ -51,6 +52,8 @@ function applyComments(){
     });
 }
 
+
+//setup all  data that get from server
 function applyData() {
     picElement = document.getElementById("DrPic")
     picElement.src = avatar
@@ -82,9 +85,11 @@ function applyData() {
     document.getElementById("phone").innerHTML = phone
     document.getElementById("address").innerHTML = address
 
+    //setup date activity
     var days = document.getElementsByClassName("day")
     for (i = 0; i < days.length; i++) {
-        if (week_days[i] == true) {
+        console.log(week_days[i])
+        if (week_days[i] == true || week_days[i] == "True") {
 
             days[i].getElementsByClassName("tik")[0].classList.add("appear");
             days[i].getElementsByClassName("tik")[0].classList.remove("hidden");
@@ -105,6 +110,8 @@ function applyData() {
     }
 }
 
+
+//normal phase fetch from server
 function fetchDrPAgeData(ID) {
     URL = API + ID
     fetch(URL)
@@ -132,6 +139,8 @@ function fetchDrPAgeData(ID) {
 
 }
 
+
+//our server
 function fetchDrPAgeDataWithPhone(input) {
     URL = "http://127.0.0.1:8000/polls/user/getDoc/" + input + "/"
     console.log(URL)
@@ -148,13 +157,14 @@ function fetchDrPAgeDataWithPhone(input) {
                 online_pay = data["online_pay"]
                 // first_empty_date = data["first_empty_date"]
                 experience_years = data["experience_years"]
-                rate = parseInt(data["score"] * 5 );
-                stars = parseInt(parseFloat(stars))
+                rate = parseInt(data["score"]);
+                stars = parseInt(parseFloat(rate))
                 comments = data["scores_count"]
                 comment_text = data["last_Comment"]
                 address = data["address"]
                 phone = data["phone"]
                 week_days = data["week_days"]
+                window.alert(week_days)
                 comment_Array = data["comments"]
                 if(comment_Array.length>0){
                     commenter = comment_Array[comment_Array.length-1].name
@@ -165,6 +175,7 @@ function fetchDrPAgeDataWithPhone(input) {
 
 }
 
+//setupd listener of pages
 function addListeners(){
     sendCommentButton.addEventListener('click',()=>{
         console.log("we catch ok : " + phoneDr)
@@ -182,10 +193,10 @@ function addListeners(){
             applyComments()
             });
         }
-        
     });
 }
 
+//calculate number of startss
 function checkStarsComments(){
     for(var i = 1 ; i<6 ; i++){
         if(document.getElementById(i+"").checked){
